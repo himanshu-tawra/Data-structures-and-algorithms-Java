@@ -50,6 +50,23 @@ class Linkedlist {
         return curreNode.data;
 
     }
+
+    public int middleNodeOfList(){
+
+        if(head == null){
+            return 0;
+        }
+        Node slow = head;
+        Node fast = head.next;
+
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;        
+        }
+
+        return slow.data;
+    }
     public static void main(String[] args){
 
         Linkedlist list = new Linkedlist();
@@ -63,6 +80,10 @@ class Linkedlist {
         int middle = list.middleNode();
 
         System.out.println("Middle node : " + middle);
+
+        int middle2 = list.middleNodeOfList();
+
+        System.out.println("Middle node : " + middle2); 
 
     }
 }

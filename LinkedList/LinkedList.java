@@ -1,14 +1,14 @@
 class LinkedList{
 
     class Node{
-        int data;
-        Node next;
+        private int data;
+        private Node next;
         Node(int data){
             this.data = data;
             next = null;
         }
     }
-    Node head;
+    private Node head;
 
     public void insertAtBeginning(int data){
 
@@ -92,6 +92,7 @@ class LinkedList{
         }
     }
 
+    /*
     public void deleteKey(int data){
 
         if(head.data == data){
@@ -115,7 +116,7 @@ class LinkedList{
 
         }
     }
-
+*/
     public void show(){
         Node currentNode = head;
         while(currentNode != null){
@@ -148,14 +149,7 @@ class Test{
         list.insertAtEnd(50);
         list.show();
         list.insertAtEnd(100);
-
-        list.deleteFront();
-        list.show();
-        list.deleteEnd();
-
-        list.deleteKey(12);
-        list.deleteKey(1);
-        list.deleteKey(420);
+        
         list.show();
     }
 }
